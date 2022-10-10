@@ -55,7 +55,7 @@ publish("table1")
   .query("SELECT 1 AS test") // Defines the query
   .type("table") // Sets the query's type
   .dependencies(["other_table"]) // Specifies dataset dependencies
-  .descriptor({
+  .columns({
     test: "Value is 1" // Describes fields in the dataset
   });
 ```
@@ -66,7 +66,7 @@ Multiple configuration properties can also be set using the `config()` method, o
 publish("table1", {
   type: "table",
   dependencies: ["other_table"],
-  descriptor: {
+  columns: {
     test: "Value is 1"
   }
 });
